@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  padding: 1rem 5rem;
+  background: white;
+  position: sticky;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 5rem;
+}
+
+.name-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 3rem;
+  cursor: default;
+  transform: translate(-50%, -50%) scale(3);
+  /* text-shadow: -2px 0px #005be4, 2px 0px #e48900; */
+}
+
+.typing-text-container {
+  color: rgb(100, 100, 100);
+  position: absolute;
+  top: 60%;
+  left: 19%;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.typing-text-cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: rgb(21, 21, 21);
+  animation: blink 1s infinite;
+}
+
+.typing-text-cursor.is-typing {
+  animation: none;
+}
+
+.about-section,
+.projects-section {
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-section img {
+  height: 100%;
+}
+
+.projects-section img {
+  height: 100%;
+}
+
+.home {
+  height: 100vh;
+}
+
+.square {
+  height: 10rem;
+  width: 10rem;
+  background: #005be4;
+  position: absolute;
+  top: 70%;
+  left: 80%;
+}
+
+.circle {
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  background: #e48900;
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  z-index: 10;
+}
+
+@keyframes blink {
+  0% {
+    background-color: rgb(21, 21, 21);
+  }
+  25% {
+    background-color: rgb(21, 21, 21);
+  }
+  50% {
+    background-color: transparent;
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgb(21, 21, 21);
+  }
+}
