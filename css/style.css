@@ -6,13 +6,15 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: #efecea;
 }
 
 nav {
   display: flex;
   justify-content: end;
   padding: 1rem 5rem;
-  background: white;
+  background: #efecea;
   position: sticky;
 }
 
@@ -33,21 +35,65 @@ a {
   margin-left: 5rem;
 }
 
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-span-text {
+  font-weight: 400;
+  color: rgb(212, 212, 212);
+  font-size: 3rem;
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.slider {
+  background: #005be4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 101;
+  transform: translateY(100%);
+}
+
 .name-logo {
   position: absolute;
   left: 50%;
   top: 50%;
   font-size: 3rem;
+  color: #222222;
   cursor: default;
   transform: translate(-50%, -50%) scale(3);
   /* text-shadow: -2px 0px #005be4, 2px 0px #e48900; */
 }
 
 .typing-text-container {
-  color: rgb(100, 100, 100);
+  /* color: rgb(100, 100, 100); */
+  color: #efecea;
+  -webkit-text-stroke: 1px rgb(58, 58, 58);
   position: absolute;
   top: 60%;
-  left: 19%;
+  left: 26%;
   overflow: hidden;
   font-size: 2rem;
 }
@@ -63,14 +109,51 @@ a {
   animation: none;
 }
 
+.section-transition-one {
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(#efecea, #fffaf2);
+}
+
+/* 
+.section-transition {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-of-header,
+.beginning-of-about {
+  position: relative;
+  z-index: -10;
+}
+
+.beginning-of-about {
+  background-color: #fffaf2;
+} */
+
+/* .end-of-header p,
+.beginning-of-about p {
+  color: #e48900;
+  opacity: 0.2;
+  font-size: 5rem;
+} */
+
 .about-section,
-.projects-section {
+.projects-section,
+.contact-section {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
-  color: white;
+  background-color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.about-section {
+  background-color: #fffaf2;
 }
 
 .about-section img {
@@ -83,6 +166,18 @@ a {
 
 .home {
   height: 100vh;
+}
+
+.name-background {
+  height: 3rem;
+  width: 60rem;
+  background: #e48900;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  opacity: 50%;
+  z-index: -10;
+  transform: translate(-50%, -50%);
 }
 
 .square {
