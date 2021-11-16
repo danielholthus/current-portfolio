@@ -1,56 +1,74 @@
+//timeline for intro sequence
 let tl = gsap.timeline({default: {ease: 'power1.out'}});
 
+//timeline for name logo
 let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: '.home',
         start: '0%',
-        end: '70%',
-        scrub: 1
+        end: '35%',
+        scrub: 1,
     }
 });
 
+//timeline for square
 let tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: '.home',
         start: '0%',
-        end: '40%',
+        end: '60%',
         scrub: 0.3
     }
 });
 
-let tl4 = gsap.timeline({
+//timeline for typing text
+let tl5 = gsap.timeline({
     scrollTrigger: {
         trigger: '.home',
         start: '0%',
-        end: '35%',
+        end: '50%',
         scrub: 0.3
     }
 });
 
-// let tl5 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.home',
-//         start: '0%',
-//         end: '200%',
-//         scrub: 0.5
-//     }
-// });
+//timeline for name background
+let tl6 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.home',
+        start: '0%',
+        end: '50%',
+        scrub: 0.3
+    }
+});
 
-// let tl6 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.home',
-//         start: '0%',
-//         end: '200%',
-//         scrub: 0.5
-//     }
-// });
-
+//timeline for projects title
 let tl7 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '35%',
-        scrub: 0.3
+        trigger: '.project-1',
+        start: '15% 90%',
+    }
+});
+
+//timeline for second row of projects 
+let tl8 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.project-3',
+        start: '25% 90%',
+    }
+});
+
+//timeline for projects shapes 
+let tl9 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects',
+        start: 'top bottom',
+    }
+});
+
+let tl10 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects-triangle',
+        start: 'top bottom',
     }
 });
 
@@ -58,25 +76,24 @@ let tl7 = gsap.timeline({
 // .to('.slider', {y: "-100%", duration: 1.5, delay: 3})
 // .to('.intro', {y: "-100%", duration: 1}, "-=1")
 
-tl2.to('.name-logo', {scale: 0.5, top: 0, left: 0, x: '50%', y: '50%', cursor: 'pointer'});
+tl2.to('.name-logo', {scale: 1, top: '2%', left: '4%', x: '50%', y: '50%'});
 
-tl3.to('.square', {left: '100%', opacity: 0, rotation: 90});
+tl3.to('.home-square', {rotation: 90, left: '105%', opacity: 0});
 
-tl4.to('.typing-text-container', {opacity: 0, left: '10%'});
+tl5.to('.typing-text-container', {opacity: 0});
 
-// tl5.to('.end-of-header', {left: '5%'})
+tl6.to('.name-background', {opacity: 0});
 
-// tl6.to('.beginning-of-about', {left: '-5%'})
+tl7.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
+    .fromTo('.project-2', {opacity: 0, top: '20px'}, {opacity: 1, top: 0}, '-=0.2');
 
-tl7.to('.name-background', {opacity: 0})
+tl8.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
+    .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
 
-let tl8 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '500%',
-        scrub: 0.3,
-        pin: true,
-        pinSpacing: false,
-    }
-});
+tl9.to('.projects-square', {duration: 110, x: '100vw', y: '20vh', rotation: 360, ease:'linear'})
+    .to('.projects-square', {duration: 120, x: '-90vw', y: '20vh', rotation: -360, ease: 'linear'})
+    
+    
+tl10.to('.projects-triangle', {duration: 90, x: '-100vw', y: '-20vh', rotation: -360, ease:'linear'})
+    .to('.projects-triangle', {duration: 105, x: '90vw', y: '20vh', rotation: 360, ease: 'linear'});
+

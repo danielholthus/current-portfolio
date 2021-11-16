@@ -7,15 +7,17 @@
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  background-color: #efecea;
 }
 
 nav {
   display: flex;
   justify-content: end;
   padding: 1rem 5rem;
-  background: #efecea;
-  position: sticky;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  color: #222222;
+  z-index: 100;
 }
 
 h2 {
@@ -28,7 +30,7 @@ ul {
   align-items: center;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
@@ -77,19 +79,25 @@ a {
 }
 
 .name-logo {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
-  font-size: 3rem;
   color: #222222;
   cursor: default;
-  transform: translate(-50%, -50%) scale(3);
+  transform: translate(-50%, -50%) scale(6);
+  z-index: 1000;
   /* text-shadow: -2px 0px #005be4, 2px 0px #e48900; */
 }
 
+/* .name-logo::after {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+} */
+
 .typing-text-container {
   /* color: rgb(100, 100, 100); */
-  color: #efecea;
+  color: transparent;
   -webkit-text-stroke: 1px rgb(58, 58, 58);
   position: absolute;
   top: 60%;
@@ -109,87 +117,44 @@ a {
   animation: none;
 }
 
-.section-transition-one {
-  width: 100%;
-  height: 10rem;
-  background: linear-gradient(#efecea, #fffaf2);
-}
-
-/* 
-.section-transition {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.end-of-header,
-.beginning-of-about {
-  position: relative;
-  z-index: -10;
-}
-
-.beginning-of-about {
-  background-color: #fffaf2;
-} */
-
-/* .end-of-header p,
-.beginning-of-about p {
-  color: #e48900;
-  opacity: 0.2;
-  font-size: 5rem;
-} */
-
-.about-section,
-.projects-section,
-.contact-section {
+.contact {
   height: 100vh;
-  background-color: white;
-  color: black;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-
-.about-section {
-  background-color: #fffaf2;
-}
-
-.about-section img {
-  height: 100%;
-}
-
-.projects-section img {
-  height: 100%;
+  justify-content: center;
+  background-color: #e9e1dc;
 }
 
 .home {
   height: 100vh;
+  background-color: #e9e1dc;
+  border-bottom: 1px solid #222222;
 }
 
 .name-background {
   height: 3rem;
-  width: 60rem;
+  width: 70vw;
   background: #e48900;
   position: absolute;
   top: 55%;
   left: 50%;
   opacity: 50%;
-  z-index: -10;
   transform: translate(-50%, -50%);
+  transition: transform ease;
+  border: 2px solid #222222;
 }
 
-.square {
+.home-square {
   height: 10rem;
   width: 10rem;
   background: #005be4;
   position: absolute;
   top: 70%;
   left: 80%;
+  border: 2px solid #222222;
 }
 
-.circle {
+.home-circle {
   height: 14rem;
   width: 14rem;
   border-radius: 50%;
@@ -198,7 +163,167 @@ a {
   top: -15%;
   left: 10%;
   z-index: 10;
+  border: 1px solid #222222;
 }
+
+.scrollarrow {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 4px double #222222;
+  border-bottom: 4px double #222222;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: scrolldown 2s infinite 1s;
+  animation: scrolldown 2s infinite 1s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+/* Projects section */
+
+.projects {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #222222;
+}
+
+.projects-square {
+  position: absolute;
+  height: 320px;
+  width: 320px;
+  border: 1px solid #222222;
+  top: 116%;
+  left: -1%;
+  transform: rotate(10deg);
+}
+
+.projects-circle {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #222222;
+}
+
+.projects-triangle {
+  position: absolute;
+  top: 200%;
+  left: 87%;
+  transform: rotate(5deg);
+}
+
+.projects-title {
+  letter-spacing: 0.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(58, 58, 58);
+  margin: 5rem 0;
+}
+
+.projects-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.project-cards-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.project {
+  display: block;
+  border: 2px solid #222222;
+  max-width: 47%;
+  position: relative;
+}
+
+.project-cards-row .project-1,
+.project-cards-row .project-3 {
+  margin-bottom: 80px;
+}
+
+.project-cards-row .project-2,
+.project-cards-row .project-4 {
+  align-self: flex-end;
+}
+
+.project .content {
+  padding: 20px;
+  background-color: #e9e1dc;
+  border-top: 2px solid #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project .content h4 {
+  font-size: 1.1rem;
+  color: #222222;
+  /* color: transparent;
+  -webkit-text-stroke: 1px rgb(0, 0, 0); */
+  letter-spacing: 0.1rem;
+  margin-bottom: 7px;
+}
+
+.project .content p {
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+.project img {
+  max-width: 100%;
+  margin-bottom: -4px;
+}
+
+.project-links {
+  margin-top: 2.5rem;
+}
+
+.projects button {
+  border-radius: 5%;
+  border: 1px solid #222222;
+  padding: 6px;
+  background-color: #e4890081;
+  color: #222222;
+}
+
+.projects button:hover {
+  box-shadow: -3px 3px 0px 0px #222222;
+  position: relative;
+  transform: translate(3px, -3px);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.projects button:not(:hover) {
+  box-shadow: 0;
+  position: inherit;
+  transform: none;
+  transition: 0.1s;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1280px) {
+  .name-logo {
+    transform: translate(-50%, -50%) scale(4);
+  }
+}
+
+/* Animation keyframes */
 
 @keyframes blink {
   0% {
@@ -215,5 +340,32 @@ a {
   }
   100% {
     background-color: rgb(21, 21, 21);
+  }
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 1;
+  }
+}
+@keyframes scrolldown {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+    opacity: 0;
   }
 }
