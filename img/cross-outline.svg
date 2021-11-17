@@ -1,0 +1,14 @@
+<svg width="401" height="401" viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="119.5" y1="400.5" x2="119.5" y2="280.5" stroke="black" stroke-linecap="round"/>
+<line x1="280.5" y1="400.5" x2="280.5" y2="281.5" stroke="black" stroke-linecap="round"/>
+<line x1="119.5" y1="400.5" x2="280.5" y2="400.5" stroke="black" stroke-linecap="round"/>
+<line x1="281.5" y1="0.5" x2="281.5" y2="120.5" stroke="black" stroke-linecap="round"/>
+<line x1="120.5" y1="0.5" x2="120.5" y2="119.5" stroke="black" stroke-linecap="round"/>
+<line x1="279.5" y1="0.5" x2="120.5" y2="0.5" stroke="black" stroke-linecap="round"/>
+<line x1="0.5" y1="119.5" x2="120.5" y2="119.5" stroke="black" stroke-linecap="round"/>
+<line x1="0.5" y1="280.5" x2="119.5" y2="280.5" stroke="black" stroke-linecap="round"/>
+<line x1="0.5" y1="119.5" x2="0.500007" y2="279.5" stroke="black" stroke-linecap="round"/>
+<line x1="400.5" y1="281.5" x2="280.5" y2="281.5" stroke="black" stroke-linecap="round"/>
+<line x1="400.5" y1="120.5" x2="281.5" y2="120.5" stroke="black" stroke-linecap="round"/>
+<line x1="400.5" y1="279.5" x2="400.5" y2="120.5" stroke="black" stroke-linecap="round"/>
+</svg>

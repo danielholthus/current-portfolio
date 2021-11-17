@@ -57,26 +57,38 @@ let tl8 = gsap.timeline({
     }
 });
 
-//timeline for projects shapes 
+//timeline for projects square 
 let tl9 = gsap.timeline({
     scrollTrigger: {
         trigger: '.projects',
         start: 'top bottom',
-    }
+    },
+    repeat: -1
 });
 
-let tl10 = gsap.timeline({
+//timeline for projects triangle
+let tl11 = gsap.timeline({
     scrollTrigger: {
         trigger: '.projects-triangle',
         start: 'top bottom',
-    }
+    },
+    repeat: -1,
+});
+
+//timeline for projects cross
+let tl12 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects-cross',
+        start: 'top bottom',
+    },
+    repeat: -1
 });
 
 // tl.to('.intro-span-text', {y: '0%', duration: 1, stagger: 0.25})
 // .to('.slider', {y: "-100%", duration: 1.5, delay: 3})
 // .to('.intro', {y: "-100%", duration: 1}, "-=1")
 
-tl2.to('.name-logo', {scale: 1, top: '2%', left: '4%', x: '50%', y: '50%'});
+tl2.to('.name-logo', {scale: 1, x: '-43vw', y: '-45.5vh'});
 
 tl3.to('.home-square', {rotation: 90, left: '105%', opacity: 0});
 
@@ -90,10 +102,13 @@ tl7.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
 tl8.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
     .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
 
-tl9.to('.projects-square', {duration: 110, x: '100vw', y: '20vh', rotation: 360, ease:'linear'})
-    .to('.projects-square', {duration: 120, x: '-90vw', y: '20vh', rotation: -360, ease: 'linear'})
+tl9.to('.projects-square', {duration: 60, x: '105vw', y: '20vh', rotation: 340, ease:'linear'})
+    .to('.projects-square', {duration: 100, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'})
     
     
-tl10.to('.projects-triangle', {duration: 90, x: '-100vw', y: '-20vh', rotation: -360, ease:'linear'})
-    .to('.projects-triangle', {duration: 105, x: '90vw', y: '20vh', rotation: 360, ease: 'linear'});
+tl11.to('.projects-triangle', {duration: 70, x: '-105vw', y: '-20vh', rotation: -340, ease:'linear'})
+    .to('.projects-triangle', {duration: 100, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
+
+tl12.to('.projects-cross', {duration: 80, x: '105vw', y: '-80vh', rotation: 340, ease:'linear'})
+    .to('.projects-cross', {duration: 120, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'})
 
