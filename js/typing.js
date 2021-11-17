@@ -1,10 +1,10 @@
 const typedTextSpan = document.querySelector('.typing-text');
 const cursorSpan = document.querySelector(".typing-text-cursor");
 
-const textArray = ["full-stack web developer", "computer science graduate", "coffee overconsumer", "dog smotherer"];
+const textArray = ["full-stack web developer", "computer science graduate", "web design enthusiast", "coffee overconsumer"];
 const typingDelay = 70;
 const erasingDelay = 35;
-const newTextDelay = 4000;
+const newTextDelay = 3000;
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -33,10 +33,10 @@ function erase() {
     cursorSpan.classList.remove("is-typing");
     textArrayIndex++;
     if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, 4000);
+    setTimeout(type, 1000);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-    if(textArray.length) setTimeout(type, 6000);
+    if(textArray.length) setTimeout(type, 1000);
 });

@@ -11,7 +11,7 @@ let tl2 = gsap.timeline({
     }
 });
 
-//timeline for square
+//timeline for home square
 let tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: '.home',
@@ -102,13 +102,13 @@ tl7.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
 tl8.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
     .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
 
-tl9.to('.projects-square', {duration: 60, x: '105vw', y: '20vh', rotation: 340, ease:'linear'})
+tl9.to('.projects-square', {duration: 60, x: '102vw', y: '20vh', rotation: 340, ease:'linear'})
     .to('.projects-square', {duration: 100, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'})
     
     
-tl11.to('.projects-triangle', {duration: 70, x: '-105vw', y: '-20vh', rotation: -340, ease:'linear'})
+tl11.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
     .to('.projects-triangle', {duration: 100, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
 
-tl12.to('.projects-cross', {duration: 80, x: '105vw', y: '-80vh', rotation: 340, ease:'linear'})
+tl12.to('.projects-cross', {duration: 80, x: '102vw', y: '-80vh', rotation: 340, ease:'linear'})
     .to('.projects-cross', {duration: 120, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'})
 

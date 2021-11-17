@@ -305,6 +305,7 @@ nav a {
 
 .project-links {
   margin-top: 2.5rem;
+  color: #222222;
 }
 
 .project-1 button {
@@ -326,13 +327,14 @@ nav a {
 .projects button {
   border-radius: 5%;
   border: 1px solid #222222;
-  padding: 6px;
+  padding: 7px;
+  font-size: 1rem;
 }
 
 .projects button:hover {
   box-shadow: -3px 3px 0px 0px #222222;
   position: relative;
-  transform: translate(3px, -3px);
+  transform: translate(4px, -4px);
   transition: 0.1s;
   cursor: pointer;
 }
