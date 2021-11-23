@@ -41,14 +41,14 @@ nav a {
   margin-left: 5rem;
 }
 
-.intro {
-  background: black;
+/* .intro {
+  background: #e9e1dc;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,12 +56,13 @@ nav a {
 
 .intro-span-text {
   font-weight: 400;
-  color: rgb(212, 212, 212);
+  color: transparent;
   font-size: 3rem;
+  -webkit-text-stroke: 2px rgb(58, 58, 58);
 }
 
 .hide {
-  background: black;
+  background: #e9e1dc;
   overflow: hidden;
   margin: 1rem 0;
 }
@@ -72,15 +73,15 @@ nav a {
 }
 
 .slider {
-  background: #005be4;
+  background: #e9e1dc;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 101;
-  transform: translateY(100%);
-}
+  z-index: 1001;
+  transform: translateX(-100%);
+} */
 
 .name-logo {
   position: fixed;
@@ -89,7 +90,7 @@ nav a {
   color: #222222;
   cursor: default;
   transform: translate(-50%, -50%) scale(6);
-  z-index: 1000;
+  z-index: 500;
   /* text-shadow: -2px 0px #005be4, 2px 0px #e48900; */
 }
 
@@ -124,11 +125,10 @@ nav a {
 .name-background {
   height: 3rem;
   width: 70vw;
-  background: #e48900;
+  background: #e489009f;
   position: absolute;
   top: 55%;
   left: 50%;
-  opacity: 50%;
   transform: translate(-50%, -50%);
   transition: transform ease;
   border: 2px solid #222222;
@@ -167,7 +167,7 @@ nav a {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: scrolldown 2s infinite 1s;
-  animation: scrolldown 2s infinite 1s;
+  animation: scrolldown 2s infinite 8s;
   box-sizing: border-box;
   opacity: 0;
 }
@@ -215,6 +215,7 @@ nav a {
   color: transparent;
   -webkit-text-stroke: 1px rgb(58, 58, 58);
   margin: 0 0 6rem 0;
+  z-index: 1;
 }
 
 .projects-container {
@@ -331,7 +332,6 @@ nav a {
 
 .about {
   height: 100vh;
-  flex-direction: column;
   background-color: #e9e1dc;
   position: relative;
   z-index: -1;
@@ -343,13 +343,12 @@ nav a {
   letter-spacing: 0.2rem;
   color: transparent;
   -webkit-text-stroke: 1px rgb(58, 58, 58);
-  margin: 0 0 5rem 0;
   z-index: 10;
 }
 
 .about-title-background {
   position: absolute;
-  top: 18.5%;
+  top: 130px;
   width: 330px;
   left: 3%;
   background-color: #e48900;
@@ -381,10 +380,20 @@ nav a {
 /* Contact section */
 
 .contact {
-  height: 100vh;
+  height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #e7e7e7;
+  padding: 6rem;
+  border-bottom: 1px solid #222222;
+}
+
+.contact-title {
+  letter-spacing: 0.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(58, 58, 58);
 }
 
 /* Media queries */
