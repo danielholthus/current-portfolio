@@ -114,10 +114,6 @@ let tl15 = gsap.timeline({
     },
 });
 
-// tl.to('.intro-span-text', {y: '0%', duration: 1, stagger: 0.25})
-// .to('.intro-span-text', {y: '100%', duration: 1, stagger: 0.1, delay: 0})
-// .to('.intro', {opacity: 0, duration: 2})
-
 tl2.to('.name-logo', {scale: 1, x: '-43vw', y: '-45.5vh'});
 
 tl3.to('.home-square', {rotation: 90, left: '105%', opacity: 0});
