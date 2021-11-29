@@ -99,7 +99,7 @@ let tl14 = gsap.timeline({
     scrollTrigger: {
         trigger: '.about',
         start: 'top 70%',
-        end: '60% top',
+        end: '70% top',
         scrub: true,
     },
 });
@@ -138,8 +138,8 @@ tl11.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: 
 tl12.to('.projects-cross', {duration: 80, x: '102vw', y: '-80vh', rotation: 340, ease:'linear'})
     .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
 
-tl13.from('.about-title-background', {scaleX: 0, transformOrigin: "left center", ease: "none"});
+// tl13.from('.about-title-background', {scaleX: 0, transformOrigin: "left center", ease: "none"});
 
-tl14.to('.about-title-container', {y: '-120px', x: '15px'});
+tl14.to('.about-content', {y: '-80px', x: '15px'});
 
 tl15.to('.headshot', {y: '100px'});

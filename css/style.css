@@ -323,15 +323,23 @@ nav a {
   z-index: -1;
 } */
 
-.about-title-container {
+.about-content {
   position: absolute;
   width: 600px;
+  top: 30%;
+  right: 44%;
+  z-index: 10;
+}
+
+.about-title-container {
   border: 1px solid #222222;
   padding: 12px 40px;
-  right: 44%;
-  top: 30%;
   background-color: #e9e1dc;
-  z-index: 10;
+}
+
+.about-personal-description {
+  color: #e9e1dc;
+  padding: 12px 50px;
 }
 
 .about-title-container h1 {
