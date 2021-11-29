@@ -4,13 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 html,
 body {
   overflow-x: hidden;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -22,10 +29,6 @@ nav {
   width: 100%;
   color: #222222;
   z-index: 100;
-}
-
-h2 {
-  font-size: 3.5rem;
 }
 
 ul {
@@ -50,6 +53,8 @@ nav a {
   transform: translate(-50%, -50%) scale(6);
   z-index: 500;
   /* text-shadow: -2px 0px #005be4, 2px 0px #e48900; */
+  font-weight: 400;
+  font-size: 1.45rem;
 }
 
 .typing-text-container {
@@ -93,23 +98,23 @@ nav a {
 }
 
 .home-square {
-  height: 10rem;
-  width: 10rem;
+  height: 20rem;
+  width: 20rem;
   background: #005be4;
   position: absolute;
   top: 70%;
-  left: 80%;
+  left: 78%;
   border: 2px solid #222222;
 }
 
 .home-circle {
-  height: 14rem;
-  width: 14rem;
+  height: 24rem;
+  width: 24rem;
   border-radius: 50%;
   background: #e48900;
   position: absolute;
-  top: -15%;
-  left: 10%;
+  top: -28%;
+  left: 2%;
   border: 1px solid #222222;
 }
 
@@ -156,7 +161,7 @@ nav a {
 
 .projects-cross {
   position: absolute;
-  top: 300vh;
+  bottom: -250%;
   left: 3%;
   transform: rotate(45deg);
 }
@@ -174,6 +179,7 @@ nav a {
   -webkit-text-stroke: 1px rgb(58, 58, 58);
   margin: 0 0 6rem 0;
   z-index: 1;
+  font-size: 2.5rem;
 }
 
 .projects-container {
@@ -236,7 +242,7 @@ nav a {
 
 .project img {
   max-width: 100%;
-  margin-bottom: -4px;
+  margin-bottom: -8px;
 }
 
 .project-links {
@@ -290,48 +296,59 @@ nav a {
 
 .about {
   height: 100vh;
-  background-color: #e9e1dc;
+  background-color: #2b60ff;
   position: relative;
   z-index: -1;
-  padding: 6rem;
   border-bottom: 1px solid #222222;
 }
 
-.about-title {
+/* .about-title {
+  position: absolute;
   letter-spacing: 0.2rem;
   color: transparent;
   -webkit-text-stroke: 1px rgb(58, 58, 58);
   z-index: 10;
+  font-size: 1.6rem;
+  left: 26%;
 }
 
 .about-title-background {
   position: absolute;
-  top: 130px;
-  width: 330px;
-  left: 3%;
-  background-color: #e489007e;
-  border: 1px solid #222222;
-  height: 24px;
+  top: 120px;
+  width: 280px;
+  left: 21%;
+  background-color: transparent;
+  border: 1px solid rgb(58, 58, 58);
+  height: 18px;
   z-index: -1;
-}
+} */
 
-.about-container {
+.about-title-container {
   position: absolute;
   width: 600px;
   border: 1px solid #222222;
-  padding: 30px;
-  right: 40%;
-  top: 55%;
+  padding: 12px 40px;
+  right: 44%;
+  top: 30%;
   background-color: #e9e1dc;
   z-index: 10;
 }
 
+.about-title-container h1 {
+  margin-bottom: 0.5rem;
+  color: #2b60ff;
+  /* -webkit-text-stroke: 1px rgb(58, 58, 58); */
+  font-size: 2.7rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+
 .headshot {
-  height: 500px;
+  height: 480px;
   width: auto;
   position: absolute;
-  right: 20%;
-  top: 10%;
+  left: 55%;
+  top: 7%;
   border: 2px solid #222222;
 }
 
@@ -361,7 +378,34 @@ nav a {
 }
 
 .contact-content {
-  margin: 30px 0px;
+  line-height: 2;
+  color: #222222b9;
+  z-index: 1;
+}
+
+.contact-link {
+  color: #e69d31;
+}
+
+.contact-email {
+  display: flex;
+  position: relative;
+  margin: 40px 0px;
+  cursor: pointer;
+  align-items: center;
+  height: 80px;
+  width: auto;
+  border: 1px solid #222222;
+  width: 40%;
+}
+
+.email-icon {
+  padding: 0 40px;
+  border-right: 1px solid #222222;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+  display: flex;
 }
 
 /* Footer */

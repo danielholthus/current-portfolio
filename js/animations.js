@@ -116,30 +116,30 @@ let tl15 = gsap.timeline({
 
 tl2.to('.name-logo', {scale: 1, x: '-43vw', y: '-45.5vh'});
 
-tl3.to('.home-square', {rotation: 90, left: '105%', opacity: 0});
+// tl3.to('.home-square', {rotation: 90, left: '105%', opacity: 0});
 
-tl5.to('.typing-text-container', {opacity: 0});
+// tl5.to('.typing-text-container', {opacity: 0});
 
-tl6.to('.name-background', {opacity: 0});
+// tl6.to('.name-background', {opacity: 0});
 
-tl7.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
-    .fromTo('.project-2', {opacity: 0, top: '20px'}, {opacity: 1, top: 0}, '-=0.2');
+// tl7.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
+//     .fromTo('.project-2', {opacity: 0, top: '20px'}, {opacity: 1, top: 0}, '-=0.2');
 
-tl8.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
-    .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
+// tl8.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
+//     .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
 
-tl9.to('.projects-square', {duration: 60, x: '102vw', y: '20vh', rotation: 340, ease:'linear'})
-    .to('.projects-square', {duration: 70, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
+// tl9.to('.projects-square', {duration: 60, x: '102vw', y: '20vh', rotation: 340, ease:'linear'})
+//     .to('.projects-square', {duration: 70, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
     
     
-tl11.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
-    .to('.projects-triangle', {duration: 80, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
+// tl11.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
+//     .to('.projects-triangle', {duration: 80, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
 
-tl12.to('.projects-cross', {duration: 80, x: '102vw', y: '-80vh', rotation: 340, ease:'linear'})
-    .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
+// tl12.to('.projects-cross', {duration: 80, x: '102vw', y: '-80vh', rotation: 340, ease:'linear'})
+//     .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
 
-tl13.from('.about-title-background', {scaleX: 0, transformOrigin: "left center", ease: "none"});
+// tl13.from('.about-title-background', {scaleX: 0, transformOrigin: "left center", ease: "none"});
 
-tl14.to('.about-container', {y: '-150px', x: '25px'})
+tl14.to('.about-title-container', {y: '-120px', x: '15px'});
 
-tl15.to('.headshot', {y: '100px'})
+tl15.to('.headshot', {y: '100px'});
