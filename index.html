@@ -18,9 +18,9 @@
       <section class="home">
         <nav>
           <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
         <div class="name-logo">
@@ -34,7 +34,7 @@
         </div>
         <div class="scrollarrow"><span></span></div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="projects-square"></div>
         <div class="projects-cross">
           <img src="./img/cross-outline.svg" class="cross-svg" alt="cross outline" height="350" width="350" />
@@ -55,8 +55,8 @@
                 <h4>Tech that I used</h4>
                 <p>Vue.js, Google Cloud Platform, HTML & CSS, Github, Figma</p>
                 <div class="project-links">
-                  <a><button>See case study</button></a>
-                  <a><button class="second-button">See the site</button></a>
+                  <a href=""><button>See case study</button></a>
+                  <a href="https://www.hoamsy.com/" target="_blank"><button class="second-button">See the site</button></a>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@
                 <h4>Tech that I used</h4>
                 <p>Vue.js, HTML & CSS, Github, Figma</p>
                 <div class="project-links">
-                  <a><button>See the code</button></a>
+                  <a href="https://github.com/danielholthus/blockchain-voting-systems/tree/main/vote4me" target="_blank"><button>See the code</button></a>
                 </div>
               </div>
             </div>
@@ -90,8 +90,8 @@
                   <p>Python, Github</p>
                 </div>
                 <div class="project-links">
-                  <a><button>See the code</button></a>
-                  <a><button class="second-button">Play the game</button></a>
+                  <a href="https://gist.github.com/danielholthus/1a9c0a943d8d59bdca6e3633d919c286" target="_blank"><button>See the code</button></a>
+                  <a href="https://replit.com/@DanielHolthus/Escape-Room#main.py" target="_blank"><button class="second-button">Play the game</button></a>
                 </div>
               </div>
             </div>
@@ -106,16 +106,15 @@
                 <h4>Tech that I used</h4>
                 <p>Javascript, HTML & CSS, Github, Figma</p>
                 <div class="project-links">
-                  <a><button>See the code</button></a>
+                  <a href="https://github.com/danielholthus/current-portfolio" target="_blank"><button>See the code</button></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="about">
-        <!-- <div class="about-title"><h2>About Me</h2></div>
-        <div class="about-title-background"></div> -->
+      <section class="about" id="about">
+        <div class="about-title"><h2>About Me</h2></div>
         <div class="about-content">
           <div class="about-title-container">
             <h1>I make shapes appear on the web.</h1>
@@ -126,26 +125,26 @@
         </div>
         <img class="headshot" src="./img/headshot-v2.png" alt="headshot of daniel">
       </section>
-      <section class="contact">
-        <h2>Contact Me</h2>
-        <h1>Interested? Let's work together!</h1>
-        <p class="contact-content">
-          Drop me a line! My email is <span class="contact-link">daniel@danielholthus.com</span>. You can also find me on <span class="contact-link">LinkedIn</span><br>
-          and <span class="contact-link">Github</span>. I am on <span class="contact-link">Instagram</span> as well, I'm just not super active on there at the moment.
-        </p>
+      <section class="contact" id="contact">
+        <div class="contact-title">
+          <h1>Interested? Let's work together!</h1>
+          <div class="contact-title-background"></div>
+        </div>
         <div class="contact-email">
           <div class="email-icon">
             <img src="img/email.png" alt="" height="20px" width="20px">
           </div>
           <span style="margin-right: auto; margin-left: auto;">daniel@danielholthus.com</span>
         </div>
+        <p class="contact-content">
+          Drop me a line! You can also find me on <a href="https://www.linkedin.com/in/daniel-holthus/" target="_blank" class="contact-link">LinkedIn</a> and <a href="https://github.com/danielholthus" target="_blank" class="contact-link">Github.</a>
+        </p>
       </section>
       <footer>
         <p>&copy; Daniel Holthus</p>
         <div>
-          <img src="./img/github.png" alt="">
-          <img src="./img/linkedin-icon.png" alt="">
-          <img src="./img/instagram.png" alt="">
+          <a href="https://github.com/danielholthus" target="_blank"><img src="./img/github.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/daniel-holthus/" target="_blank"><img src="./img/linkedin-icon.png" alt=""></a>
         </div>
       </footer>
     </main>
