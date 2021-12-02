@@ -125,7 +125,7 @@ tl5.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
 tl6.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
     .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
 
-tl7.to('.projects-square', {duration: 60, x: '102vw', y: '20vh', rotation: 340, ease:'linear'})
+tl7.to('.projects-square', {duration: 70, x: '102vw', y: '20vh', rotation: 340, ease:'linear'})
     .to('.projects-square', {duration: 70, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
     
     
