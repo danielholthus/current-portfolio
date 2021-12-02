@@ -107,7 +107,7 @@ nav a {
   background: #2b60ff;
   position: absolute;
   top: 70%;
-  left: 78%;
+  right: -3%;
   border: 2px solid #222222;
 }
 
@@ -384,12 +384,6 @@ nav a {
   z-index: 1;
 }
 
-.contact h2 {
-  color: #e69d31;
-  font-size: 1.25rem;
-  letter-spacing: 0.2rem;
-}
-
 .contact h1 {
   position: relative;
   font-size: 3rem;
@@ -407,6 +401,7 @@ nav a {
 
 .contact-link {
   color: #e69d31;
+  transition: color 200ms;
 }
 
 .contact-link:hover {
@@ -423,6 +418,29 @@ nav a {
   width: auto;
   border: 1px solid #222222;
   width: 40%;
+  overflow: hidden;
+}
+
+.email-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-text {
+  opacity: 0;
+  color: #e7e7e7;
+  transition: opacity 200ms ease;
+  font-size: 1.3rem;
 }
 
 .email-icon {
@@ -432,6 +450,13 @@ nav a {
   height: 100%;
   align-items: center;
   display: flex;
+}
+
+.email-address {
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 1;
+  transition: opacity 200ms ease;
 }
 
 /* Footer */
@@ -468,6 +493,23 @@ footer a:not(:nth-child(1)) {
 
 /* Animation keyframes */
 
+@-webkit-keyframes blink {
+  0% {
+    background-color: rgb(21, 21, 21);
+  }
+  25% {
+    background-color: rgb(21, 21, 21);
+  }
+  50% {
+    background-color: transparent;
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgb(21, 21, 21);
+  }
+}
 @keyframes blink {
   0% {
     background-color: rgb(21, 21, 21);
@@ -495,7 +537,7 @@ footer a:not(:nth-child(1)) {
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
     opacity: 1;
   }
 }
