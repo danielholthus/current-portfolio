@@ -134,9 +134,10 @@ nav a {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: scrolldown 2s infinite 1s;
-  animation: scrolldown 2s infinite 8s;
+  animation: scrolldown 2s infinite 0s;
   box-sizing: border-box;
   opacity: 0;
+  cursor: pointer;
 }
 
 /* Projects section */
@@ -306,6 +307,7 @@ nav a {
   position: relative;
   z-index: 1;
   border-bottom: 1px solid #222222;
+  overflow: hidden;
 }
 
 .about-title {
@@ -435,7 +437,7 @@ nav a {
 /* Footer */
 
 footer {
-  padding: 3rem 6rem;
+  padding: 1.5rem 6rem;
   background-color: #e9e1dc;
   color: #222222;
   display: flex;

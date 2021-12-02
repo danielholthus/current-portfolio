@@ -28,6 +28,20 @@ Array.prototype.forEach.call(links, function(elem, index) {
 });
 
 var logo = document.querySelector('.name-logo');
-logo.addEventListener("click", function(e) {
+logo.addEventListener("click", function() {
     window.scrollTo(0, 0)
+});
+
+var scrollarrow = document.querySelector('.scrollarrow');
+scrollarrow.addEventListener("click", function() {
+    document.getElementById('projects').scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    });
+});
+
+var email = document.querySelector('.contact-email');
+email.addEventListener("click", function(){
+    navigator.clipboard.writeText('daniel@danielholthus.com')
 });
