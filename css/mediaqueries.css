@@ -1,0 +1,266 @@
+@import "style.css";
+
+@media screen and (max-height: 770px) {
+  .name-background {
+    top: 55%;
+  }
+  .typing-text-container {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .typing-text-container {
+    left: 25%;
+  }
+  .home-square {
+    height: 20rem;
+    width: 20rem;
+  }
+  .home-circle {
+    height: 26rem;
+    width: 26rem;
+    top: -28%;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .project {
+    max-width: 47%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .typing-text-container {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .name-logo {
+    transform: translate(-50%, -50%) scale(5);
+  }
+  .name-background {
+    min-width: 850px;
+    top: 53.5%;
+    height: 2.5rem;
+  }
+  .projects-title {
+    margin: 0 0 3rem 0;
+    font-size: 2rem;
+  }
+  .projects {
+    padding: 3rem 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .typing-text-container {
+    top: 56.5%;
+    left: 19%;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(4);
+  }
+  .name-background {
+    min-width: 720px;
+    top: 53%;
+    height: 2.2rem;
+  }
+  .home-circle {
+    height: 24rem;
+    width: 24rem;
+    top: -25%;
+  }
+  .home-square {
+    height: 20rem;
+    width: 20rem;
+    top: 16%;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .project-cards-row {
+    flex-direction: column;
+  }
+  .project {
+    max-width: 80%;
+  }
+  .row-2 {
+    margin-top: 60px;
+  }
+  .projects-title {
+    margin: 0 0 3rem 0;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .projects {
+    padding: 3rem 5rem;
+  }
+  .home-square {
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .typing-text-container {
+    top: 55.5%;
+    left: 18%;
+    font-size: 1.5rem;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(3.5);
+  }
+  .name-background {
+    min-width: 600px;
+    top: 52.5%;
+    height: 2rem;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .typing-text-container {
+    top: 54%;
+    left: 19%;
+    font-size: 1.3rem;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(3);
+  }
+  .name-background {
+    min-width: 510px;
+    top: 52%;
+    height: 1.7rem;
+    border: 2px solid #222222;
+  }
+  .home-square {
+    top: 12%;
+    height: 18rem;
+    width: 18rem;
+  }
+  .home-circle {
+    left: -5%;
+    top: -24%;
+  }
+  .projects {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .typing-text-container {
+    top: 54%;
+    left: 18%;
+    font-size: 1.2rem;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+  .name-background {
+    min-width: 430px;
+    top: 51.8%;
+    height: 1.4rem;
+    border: 1px solid #222222;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .typing-text-container {
+    top: 53.5%;
+    left: 18%;
+    font-size: 1.2rem;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(2.1);
+  }
+  .name-background {
+    min-width: 360px;
+    top: 51.6%;
+    height: 1.3rem;
+    border: 1px solid #222222;
+  }
+  .home-square {
+    top: 13%;
+    height: 18rem;
+    width: 18rem;
+  }
+  .home-circle {
+    left: -15%;
+    top: -24%;
+  }
+  .projects-title {
+    font-size: 1.5rem;
+  }
+  .project .content h4 {
+    font-size: 1rem;
+  }
+  .project .content p {
+    font-size: 0.9rem;
+  }
+  .project button {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project {
+    max-width: 90%;
+  }
+  .project-1,
+  .project-3 {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .typing-text-container {
+    top: 53%;
+    left: 19%;
+    font-size: 1.1rem;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(1.75);
+  }
+  .name-background {
+    min-width: 310px;
+    top: 51.5%;
+    height: 1rem;
+    border: 1px solid #222222;
+  }
+  .home-square {
+    top: 12%;
+    height: 17rem;
+    width: 17rem;
+  }
+  .home-circle {
+    left: -15%;
+    top: -20%;
+    height: 22rem;
+    width: 22rem;
+  }
+  .project {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .typing-text-container {
+    top: 52.5%;
+    left: 27%;
+    font-size: 0.75rem;
+    color: #222222;
+    -webkit-text-stroke: 0px;
+  }
+  .name-logo {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .name-background {
+    min-width: 200px;
+    top: 50.9%;
+    height: 0.7rem;
+    border: 1px solid #222222;
+  }
+}

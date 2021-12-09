@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel Holthus</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mediaqueries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <div class="home-circle"></div>
+    <div class="all-content">
       <div class="home-square"></div>
-      <div class="name-background"></div>
       <section class="home">
         <nav>
           <ul>
@@ -29,8 +28,10 @@
             </li>
           </ul>
         </nav>
-        <div class="name-logo">
-          <p>daniel holthus</p>
+        <div class="home-circle"></div>
+        <div>
+          <p class="name-logo">daniel holthus</p>
+          <div class="name-background"></div>
         </div>
         <div class="typing-text-container">
           <p>
@@ -50,7 +51,7 @@
         </div>
         <div class="projects-title"><h2>Projects & Case Studies</h2></div>
         <div class="projects-container">
-          <div class="project-cards-row row-1">
+          <div class="project-cards-row">
             <div class="project project-1">
               <img src="./img/Hoamsy thumbnail.png" alt="hoamsy project thumbnail">
               <div class="content">
@@ -82,12 +83,27 @@
               </div>
             </div>
           </div>
-          <div class="project-cards-row">
+          <div class="project-cards-row row-2">
             <div class="project project-3">
+              <img src="./img/portfolio thumbnail.png" alt="personal website project thumbnail">
+              <div class="content">
+                <h4>03 &#8212; Portfolio Website</h4>
+                <p>Designed and developed my personal portfolio 
+                  website over many lifecycles from start to finish</p>
+                <h4>My Role</h4>
+                <p>Designer & Developer</p>
+                <h4>Tech that I used</h4>
+                <p>Javascript, HTML & CSS, Github, Figma</p>
+                <div class="project-links">
+                  <a href="https://github.com/danielholthus/current-portfolio" target="_blank"><button>See the code</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="project project-4">
               <img src="./img/escape room thumbnail.png" alt="escape room project thumbnail">
               <div class="content">
                 <div>
-                  <h4>03 &#8212; Escape Room Text Adventure</h4>
+                  <h4>04 &#8212; Escape Room Text Adventure</h4>
                   <p>Designed an escape room text adventure game
                     using Python that is played using the terminal</p>
                   <h4>My Role</h4>
@@ -101,35 +117,23 @@
                 </div>
               </div>
             </div>
-            <div class="project project-4">
-              <img src="./img/portfolio thumbnail.png" alt="personal website project thumbnail">
-              <div class="content">
-                <h4>04 &#8212; Portfolio Website</h4>
-                <p>Designed and developed my personal portfolio 
-                  website over many lifecycles from start to finish</p>
-                <h4>My Role</h4>
-                <p>Developer & Designer</p>
-                <h4>Tech that I used</h4>
-                <p>Javascript, HTML & CSS, Github, Figma</p>
-                <div class="project-links">
-                  <a href="https://github.com/danielholthus/current-portfolio" target="_blank"><button>See the code</button></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
       <section class="about" id="about">
-        <div class="about-title"><h2>About Me</h2></div>
+        <div class="about-section-title"><h2>About Me</h2></div>
         <div class="about-content">
-          <div class="about-title-container">
-            <h1>I make shapes appear on the web.</h1>
+          <div class="about-text">
+            <div class="about-text-title-container">
+              <h1>I make shapes appear on the web.</h1>
+            </div>
+            <div class="about-personal-description">
+              <p>Hey there! I'm Daniel - I'm a school-taught Software Engineer with a B.S. in Computer Science, and I am a self-taught web developer with professional experience as a full-stack web developer. So, I suppose to say that <span style="color: #2b60ff">'I make shapes move on the web'</span> is an oversimplification, but it does make for a great tagline. I am very passionate about doing things the ‘right’ way, and on every project I work on, I am always striving to perfect my efficiency and productivity as a coder while getting even the smallest of details <em style="color: #2b60ff">just</em> right.</p>
+            </div>
           </div>
-          <div class="about-personal-description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ea repudiandae ipsa illo saepe adipisci optio alias voluptates inventore perferendis dignissimos sapiente quaerat voluptatibus odio aliquam, ipsum ducimus unde explicabo? Incidunt eum distinctio, est iure adipisci nesciunt exercitationem quisquam necessitatibus deleniti, libero molestiae quasi dignissimos possimus obcaecati ratione vel officiis neque unde quaerat atque cupiditate excepturi quia maxime quis? Aperiam sequi distinctio culpa dolore soluta aliquam incidunt eaque dicta ducimus!</p>
-          </div>
+          <img class="headshot" src="./img/headshot-v2.png" alt="headshot of daniel">
         </div>
-        <img class="headshot" src="./img/headshot-v2.png" alt="headshot of daniel">
+        <img class="curved-line" src="img/curved-line.svg">
       </section>
       <section class="contact" id="contact">
         <div class="contact-title">
@@ -154,7 +158,7 @@
           <a href="https://www.linkedin.com/in/daniel-holthus/" target="_blank"><img src="./img/linkedin-icon.png" alt=""></a>
         </div>
       </footer>
-    </main>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
       integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
