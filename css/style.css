@@ -110,6 +110,7 @@ ul li a:hover::after {
   z-index: 1001;
   font-weight: 400;
   font-size: 1.45rem;
+  white-space: nowrap;
 }
 
 .name-logo-alt {

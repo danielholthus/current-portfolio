@@ -176,6 +176,7 @@
   }
   .name-logo {
     transform: translate(-50%, -50%) scale(3.5);
+    position: absolute;
   }
   .name-background {
     min-width: 600px;
@@ -248,12 +249,6 @@
   }
   .about-personal-description {
     padding: 25px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .name-logo {
-    position: absolute;
   }
 }
 

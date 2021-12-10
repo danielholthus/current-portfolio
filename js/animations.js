@@ -31,7 +31,7 @@ else if (pageWidth < 1000 && pageWidth > 760) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
 }
 else {
-    tl1.to('.name-logo', {opacity: 0}).to('.name-logo-alt', {opacity: 1});
+    tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1});
 }
 
 //timeline for home square

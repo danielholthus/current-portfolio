@@ -62,13 +62,11 @@ var emailHover = document.querySelector('.email-hover');
 var emailAddress = document.querySelector('.email-address');
 var copyText = document.querySelector('.copy-text');
 emailDiv.addEventListener("mouseover", function() {
-    console.log('got hovered')
     emailHover.style.backgroundColor = "#2b60ffc2";
     emailAddress.style.opacity = "0.1";
     copyText.style.opacity = "1";
 });
 emailDiv.addEventListener("mouseout", function() {
-    console.log('got unhovered')
     emailHover.style.backgroundColor = "transparent";
     emailAddress.style.opacity = "1";
     copyText.style.opacity = "0";
