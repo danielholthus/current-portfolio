@@ -26,6 +26,9 @@
     width: 20rem;
     top: 75%;
   }
+  .home-circle {
+    top: -30%;
+  }
 }
 
 @media screen and (max-width: 1215px) {

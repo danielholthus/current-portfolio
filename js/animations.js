@@ -30,12 +30,6 @@ else if (pageWidth < 1200 && pageWidth >= 1000) {
 else if (pageWidth < 1000 && pageWidth > 760) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
 }
-else if (pageWidth <= 760 && pageWidth > 660) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-32vw', y: '-46vh'});
-}
-else if (pageWidth <= 660 && pageWidth > 500) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-28vw', y: '-46vh'});
-}
 else {
     tl1.to('.name-logo', {opacity: 0}).to('.name-logo-alt', {opacity: 1});
 }
