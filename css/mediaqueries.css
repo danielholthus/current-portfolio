@@ -248,6 +248,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .name-logo {
+    position: absolute;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .typing-text-container {
     top: 53.5%;
