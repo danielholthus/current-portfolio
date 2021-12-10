@@ -18,29 +18,26 @@ pageWidth = window.screen.width;
 if (pageWidth >= 1500) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
 }
-if (pageWidth < 1500 && pageWidth >= 1400) {
+else if (pageWidth < 1500 && pageWidth >= 1400) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
 }
-if (pageWidth < 1400 && pageWidth >= 1200) {
+else if (pageWidth < 1400 && pageWidth >= 1200) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
 }
-if (pageWidth < 1200 && pageWidth >= 1000) {
+else if (pageWidth < 1200 && pageWidth >= 1000) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
 }
-if (pageWidth < 1000 && pageWidth > 760) {
+else if (pageWidth < 1000 && pageWidth > 760) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
 }
-if (pageWidth <= 760 && pageWidth > 660) {
+else if (pageWidth <= 760 && pageWidth > 660) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-32vw', y: '-46vh'});
 }
-if (pageWidth <= 660 && pageWidth > 500) {
+else if (pageWidth <= 660 && pageWidth > 500) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-28vw', y: '-46vh'});
 }
-if (pageWidth <= 500 && pageWidth > 400) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-24vw', y: '-46vh'});
-}
-if (pageWidth <= 400 && pageWidth > 300) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-20vw', y: '-46vh'});
+else {
+    tl1.to('.name-logo', {position: 'absolute', opacity: 0}).to('.name-logo-alt', {opacity: 1});
 }
 
 //timeline for home square
@@ -93,7 +90,7 @@ let tl5 = gsap.timeline({
     }
 });
 
-tl5.from('.project-1', {opacity: 0, right: '40px'});
+tl5.from('.project-1', {opacity: 0, x: '-40px'});
 
 //timeline for project 2
 
@@ -106,7 +103,7 @@ let tl5b = gsap.timeline({
     }
 });
 
-tl5b.from('.project-2', {opacity: 0, left: '40px'});
+tl5b.from('.project-2', {opacity: 0, x: '40px'});
 
 //timeline for project 3 
 
@@ -119,7 +116,7 @@ let tl6 = gsap.timeline({
     }
 });
 
-tl6.from('.project-3', {opacity: 0, right: '40px'});
+tl6.from('.project-3', {opacity: 0, x: '-40px'});
 
 //timeline for project 4
 
@@ -132,7 +129,7 @@ let tl6b = gsap.timeline({
     }
 });
 
-tl6b.from('.project-4', {opacity: 0, left: '40px'});
+tl6b.from('.project-4', {opacity: 0, x: '40px'});
 
 //timeline for projects square 
 

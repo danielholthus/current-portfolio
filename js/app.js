@@ -43,6 +43,11 @@ window.addEventListener('resize', function(){
     logo.innerHTML = logoContent;
 });
 
+var mobileLogo = document.querySelector('.name-logo-alt');
+mobileLogo.addEventListener("click", function() {
+    window.scrollTo(0, 0)
+});
+
 var scrollarrow = document.querySelector('.scrollarrow');
 scrollarrow.addEventListener("click", function() {
     document.getElementById('projects').scrollIntoView({
