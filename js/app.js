@@ -1,11 +1,11 @@
 // //if page reloads, always scroll back to splash page
-// if (history.scrollRestoration) {
-//     history.scrollRestoration = 'manual';
-// } else {
-//     window.onbeforeunload = function () {
-//         window.scrollTo(0, 0);
-//     }
-// }
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
 
 // -----
 // enable scroll effect from navbar items without adding anything to URL

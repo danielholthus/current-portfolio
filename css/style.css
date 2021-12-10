@@ -159,12 +159,12 @@ ul li a:hover::after {
 }
 
 .home-square {
-  height: 28rem;
-  width: 28rem;
+  height: 25rem;
+  width: 25rem;
   background: #2b60ff;
   position: absolute;
-  top: 15%;
-  right: -3%;
+  top: 68%;
+  right: -1%;
   border: 2px solid #222222;
   z-index: 100;
 }
@@ -355,7 +355,7 @@ ul li a:hover::after {
   width: 90%;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 80px;
 }
 
@@ -374,7 +374,7 @@ ul li a:hover::after {
 
 .about-personal-description {
   color: #222222;
-  padding: 24px 90px 24px 24px;
+  padding: 24px 84px 24px 24px;
   line-height: 1.7;
 }
 
@@ -419,10 +419,10 @@ ul li a:hover::after {
 
 .contact-title {
   position: relative;
+  white-space: nowrap;
 }
 
 .contact-title-background {
-  content: "";
   position: absolute;
   top: 38px;
   width: 324px;
@@ -441,11 +441,21 @@ ul li a:hover::after {
   -webkit-text-stroke: 1px rgb(58, 58, 58);
   margin-bottom: 40px;
   z-index: 10;
+  text-align: center;
+}
+
+.med-mobile-break {
+  display: none;
+}
+
+.small-mobile-break {
+  display: none;
 }
 
 .contact-content {
   line-height: 2;
   color: #222222;
+  text-align: center;
 }
 
 .contact-link {
@@ -488,6 +498,7 @@ ul li a:hover::after {
   border: 1px solid #222222;
   width: 40%;
   overflow: hidden;
+  min-width: 343px;
 }
 
 .email-hover {

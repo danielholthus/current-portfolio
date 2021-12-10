@@ -1,6 +1,6 @@
-// window.addEventListener("resize", function() {
-//     location.reload();
-// })
+window.addEventListener("resize", function() {
+    location.reload();
+})
 
 //timeline for name logo
 
@@ -56,7 +56,6 @@ let tl2 = gsap.timeline({
 
 tl2.to('.home-square', {rotation: 45, x: '100%', opacity: 0});
 
-
 //timeline for typing text
 
 let tl3 = gsap.timeline({
@@ -83,117 +82,97 @@ let tl4 = gsap.timeline({
 
 tl4.to('.name-background', {opacity: 0});
 
-// define the animation for large screens
-if (pageWidth > 825) {
+//timeline for project 1
 
-    //timeline for projects row 1
-    let tl5 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.project-1',
-            start: '15% 90%',
-        }
-    });
+let tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.project-1',
+        start: '30% bottom',
+        end: '50% bottom',
+        scrub: 1,
+    }
+});
 
-    //timeline for projects row 2 
-    let tl6 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.projects',
-            start: '25% top',
-        }
-    });
+tl5.from('.project-1', {opacity: 0, right: '40px'});
 
-    tl5.fromTo('.project-1', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
-    .fromTo('.project-2', {opacity: 0, top: '20px'}, {opacity: 1, top: 0}, '-=0.2');
+//timeline for project 2
 
-    tl6.fromTo('.project-3', {opacity: 0, top: '20px'}, {opacity: 1, top: 0})
-    .fromTo('.project-4', {opacity: 0, top: '20px'}, {opacity: 1, top: 0,}, '-=0.2');
+let tl5b = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.project-2',
+        start: '40% bottom',
+        end: '60% bottom',
+        scrub: 1,
+    }
+});
 
-} 
-// define the animation for small screens
-else {
+tl5b.from('.project-2', {opacity: 0, left: '40px'});
 
-    //timeline for project 1
-    let tl5 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.project-1',
-            end: 'top 50%',
-            scrub: .3,
-        }
-    });
+//timeline for project 3 
 
-    //timeline for project 2
-    let tl5b = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.project-2',
-            end: 'top 50%',
-            scrub: .3,
-        }
-    });
+let tl6 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.project-3',
+        start: '30% bottom',
+        end: '50% bottom',
+        scrub: 1,
+    }
+});
 
-    //timeline for project 3 
-    let tl6 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.project-3',
-            end: 'top 50%',
-            scrub: .3,
-        }
-    });
+tl6.from('.project-3', {opacity: 0, right: '40px'});
 
-    //timeline for project 4
-    let tl6b = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.project-4',
-            end: 'top 50%',
-            scrub: .3,
-        }
-    });
+//timeline for project 4
 
-    tl5.fromTo('.project-1', {opacity: 0, right: '40px'}, {opacity: 1, right: 0})
-    tl5b.fromTo('.project-2', {opacity: 0, left: '40px'}, {opacity: 1, left: 0});
+let tl6b = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.project-4',
+        start: '40% bottom',
+        end: '60% bottom',
+        scrub: 1,
+    }
+});
 
-    tl6.fromTo('.project-3', {opacity: 0, right: '40px'}, {opacity: 1, right: 0});
-    tl6b.fromTo('.project-4', {opacity: 0, left: '40px'}, {opacity: 1, left: 0});
-}
+tl6b.from('.project-4', {opacity: 0, left: '40px'});
 
-// timeline for projects square 
+//timeline for projects square 
 
-// let tl7 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.projects',
-//         start: 'top bottom',
-//     },
-//     repeat: -1
-// });
+let tl7 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects',
+        start: 'top bottom',
+    },
+    repeat: -1
+});
 
-// tl7.to('.projects-square', {duration: 70, x: '102vw', y: '25vh', rotation: 340, ease:'linear'})
-//     .to('.projects-square', {duration: 70, x: '-60vw', y: '25vh', rotation: -360, ease: 'linear'});
+tl7.to('.projects-square', {duration: 70, x: '102vw', y: '25vh', rotation: 340, ease:'linear'})
+    .to('.projects-square', {duration: 70, x: '-60vw', y: '25vh', rotation: -360, ease: 'linear'});
 
-// // timeline for projects triangle
+// timeline for projects triangle
 
-// let tl8 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.projects-triangle',
-//         start: 'top bottom',
-//     },
-//     repeat: -1,
-// });
+let tl8 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects-triangle',
+        start: 'top bottom',
+    },
+    repeat: -1,
+});
     
-// tl8.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
-//     .to('.projects-triangle', {duration: 80, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
+tl8.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
+    .to('.projects-triangle', {duration: 80, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
 
-// // timeline for projects cross
+// timeline for projects cross
 
-// let tl9 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.projects-cross',
-//         start: 'top bottom',
-//     },
-//     repeat: -1
-// });
+let tl9 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.projects-cross',
+        start: 'top bottom',
+    },
+    repeat: -1
+});
 
 
-// tl9.to('.projects-cross', {duration: 80, x: '102vw', y: '-40vh', rotation: 340, ease:'linear'})
-//     .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
+tl9.to('.projects-cross', {duration: 80, x: '102vw', y: '-40vh', rotation: 340, ease:'linear'})
+    .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
 
 //timeline for headshot
 
@@ -216,13 +195,13 @@ let tl11 = gsap.timeline({
         start: 'top 70%',
         end: 'bottom bottom',
         scrub: true,
-        markers: true
     },
 });
 
 tl11.from('.about-text', {x: '-40px', y: '40px'});
 
 // timeline for contact animation
+
 let tl12 = gsap.timeline({
     scrollTrigger: {
         trigger: '.contact',

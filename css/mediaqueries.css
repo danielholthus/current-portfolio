@@ -13,14 +13,18 @@
   .typing-text-container {
     left: 25%;
   }
-  .home-square {
-    height: 20rem;
-    width: 20rem;
-  }
   .home-circle {
     height: 26rem;
     width: 26rem;
     top: -28%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .home-square {
+    height: 20rem;
+    width: 20rem;
+    top: 75%;
   }
 }
 
@@ -45,12 +49,51 @@
     top: 53.5%;
     height: 2.5rem;
   }
+  .home-square {
+    top: 75%;
+    right: -3%;
+  }
   .projects-title {
     margin: 0 0 3rem 0;
     font-size: 2rem;
   }
   .projects {
     padding: 3rem 3rem;
+  }
+  .headshot {
+    height: 480px;
+  }
+  .about-text-title-container h1 {
+    font-size: 2rem;
+  }
+  .about-text {
+    width: 560px;
+  }
+  .contact {
+    padding: 3rem;
+  }
+  .contact-email {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .about-personal-description {
+    font-size: 0.92rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about-text-title-container {
+    padding: 5px 15px;
+  }
+  .contact h1 {
+    font-size: 2rem;
+  }
+  .contact-title-background {
+    width: 234px;
+    top: 26px;
+    height: 15px;
   }
 }
 
@@ -75,7 +118,27 @@
   .home-square {
     height: 20rem;
     width: 20rem;
-    top: 16%;
+    top: 75%;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+  }
+  .headshot {
+    left: -5%;
+  }
+  .about-text {
+    right: 0;
+    margin-top: -40px;
+    width: 500px;
+  }
+  .about-content {
+    margin-top: 0;
+  }
+  .about-text-title-container {
+    text-align: center;
+  }
+  .about-personal-description {
+    padding: 40px;
   }
 }
 
@@ -98,7 +161,7 @@
     padding: 3rem 5rem;
   }
   .home-square {
-    top: 12%;
+    top: 75%;
   }
 }
 
@@ -119,6 +182,15 @@
   nav {
     display: none;
   }
+  .med-mobile-break {
+    display: block;
+  }
+  .contact-email {
+    width: 70%;
+  }
+  footer {
+    padding: 1.5rem 3rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -137,7 +209,7 @@
     border: 2px solid #222222;
   }
   .home-square {
-    top: 12%;
+    top: 75%;
     height: 18rem;
     width: 18rem;
   }
@@ -165,6 +237,15 @@
     height: 1.4rem;
     border: 1px solid #222222;
   }
+  .headshot {
+    height: 350px;
+  }
+  .about-text {
+    width: 430px;
+  }
+  .about-personal-description {
+    padding: 25px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -183,7 +264,7 @@
     border: 1px solid #222222;
   }
   .home-square {
-    top: 13%;
+    top: 78%;
     height: 18rem;
     width: 18rem;
   }
@@ -203,6 +284,15 @@
   .project button {
     font-size: 0.9rem;
   }
+  .med-mobile-break {
+    display: none;
+  }
+  .small-mobile-break {
+    display: block;
+  }
+  .contact-title-background {
+    left: 19%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -212,6 +302,21 @@
   .project-1,
   .project-3 {
     margin-right: 0px;
+  }
+  .about-section-title {
+    font-size: 2rem;
+  }
+  .about-content {
+    margin-top: 10px;
+  }
+  .headshot {
+    height: 280px;
+  }
+  .about-text {
+    width: 340px;
+  }
+  .about-content {
+    margin-bottom: 20px;
   }
 }
 
@@ -231,7 +336,7 @@
     border: 1px solid #222222;
   }
   .home-square {
-    top: 12%;
+    top: 75%;
     height: 17rem;
     width: 17rem;
   }
@@ -243,6 +348,49 @@
   }
   .project {
     max-width: 100%;
+  }
+  .med-mobile-break {
+    display: block;
+  }
+  .contact-title-background {
+    left: -5%;
+  }
+  .contact {
+    padding: 2rem;
+  }
+  .contact-email {
+    height: 70px;
+    min-width: 300px;
+  }
+  .email-icon {
+    padding: 0 25px;
+  }
+  .email-address {
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about-section-title {
+    font-size: 2rem;
+  }
+  .about-content {
+    margin-top: 10px;
+  }
+  .headshot {
+    height: 280px;
+  }
+  .about-text {
+    width: 300px;
+  }
+  .about-content {
+    margin-bottom: 20px;
+  }
+  .about-text-title-container h1 {
+    font-size: 1.5rem;
   }
 }
 
