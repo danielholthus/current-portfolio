@@ -300,6 +300,7 @@ ul li a:hover::after {
 
 .project-links {
   margin-top: 2.5rem;
+  display: flex;
 }
 
 .project-btn {
