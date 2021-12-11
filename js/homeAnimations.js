@@ -65,36 +65,6 @@ if ("maxTouchPoints" in navigator) {
     }
 }
 
-//timeline for name logo
-
-let tl1 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '35%',
-        scrub: 1
-    }
-});
-
-if (pageWidth >= 1500 && !(hasTouchScreen)) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
-}
-else if (pageWidth < 1500 && pageWidth >= 1400 && !(hasTouchScreen)) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
-}
-else if (pageWidth < 1400 && pageWidth >= 1200 && !(hasTouchScreen)) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
-}
-else if (pageWidth < 1200 && pageWidth >= 1000 && !(hasTouchScreen)) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
-}
-else if (pageWidth < 1000 && pageWidth > 760 && !(hasTouchScreen)) {
-    tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
-}
-else {
-    tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1});
-}
-
 // load all animations except for name animation AFTER the dom loads
 
 window.onload = function () {
