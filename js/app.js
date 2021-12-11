@@ -58,11 +58,13 @@ Array.prototype.forEach.call(links, function(elem, index) {
 // event listeners
 
 var nav = document.getElementById("nav");
+if (hasTouchScreen) {
+    nav.style.position = "absolute";
+}
 
 var logo = document.querySelector('.name-logo');
-if (hasTouchScreen && window.innerWidth < 760) {
+if (hasTouchScreen || window.innerWidth < 760) {
     logo.style.position = "absolute";
-    nav.style.position = "absolute";
 }
 logo.addEventListener("click", function() {
     window.scrollTo(0, 0)

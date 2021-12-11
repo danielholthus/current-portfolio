@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #ffb7b7cb;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e9e1dc;
+}
+
+header {
+  height: 100vh;
+  margin-bottom: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(58, 58, 58);
+  font-size: 5rem;
+}
+
+header h2 {
+  font-size: 2rem;
+  color: #222222;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  color: #2b60ff;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+header p {
+  line-height: 1.6;
+  color: #222222;
+}
+
+.hoamsy-title {
+  position: absolute;
+}
+
+.contributions {
+  position: absolute;
+  max-width: 432px;
+  min-width: 350px;
+}
+
+.home-page {
+  background-color: white;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
