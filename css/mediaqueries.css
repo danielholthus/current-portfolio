@@ -353,6 +353,12 @@
   .project {
     max-width: 100%;
   }
+  .project-btn {
+    min-height: 52px;
+  }
+  .button-background {
+    min-height: 52px;
+  }
   .med-mobile-break {
     display: block;
   }

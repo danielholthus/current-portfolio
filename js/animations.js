@@ -1,6 +1,29 @@
-// window.addEventListener("resize", function() {
-//     location.reload();
-// })
+window.addEventListener("resize", function() {
+    location.reload();
+})
+
+// checking if user screen is a touch screen
+
+var hasTouchScreen = false;
+if ("maxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.maxTouchPoints > 0;
+} else if ("msMaxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.msMaxTouchPoints > 0;
+} else {
+    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+    if (mQ && mQ.media === "(pointer:coarse)") {
+        hasTouchScreen = !!mQ.matches;
+    } else if ('orientation' in window) {
+        hasTouchScreen = true; // deprecated, but good fallback
+    } else {
+        // Only as a last resort, fall back to user agent sniffing
+        var UA = navigator.userAgent;
+        hasTouchScreen = (
+            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+        );
+    }
+}
 
 //timeline for name logo
 
@@ -13,21 +36,21 @@ let tl1 = gsap.timeline({
     }
 });
 
-pageWidth = window.screen.width;
+pageWidth = window.innerWidth;
 
-if (pageWidth >= 1500) {
+if (pageWidth >= 1500 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
 }
-else if (pageWidth < 1500 && pageWidth >= 1400) {
+else if (pageWidth < 1500 && pageWidth >= 1400 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
 }
-else if (pageWidth < 1400 && pageWidth >= 1200) {
+else if (pageWidth < 1400 && pageWidth >= 1200 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
 }
-else if (pageWidth < 1200 && pageWidth >= 1000) {
+else if (pageWidth < 1200 && pageWidth >= 1000 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
 }
-else if (pageWidth < 1000 && pageWidth > 760) {
+else if (pageWidth < 1000 && pageWidth > 760 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
 }
 else {

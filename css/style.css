@@ -319,6 +319,8 @@ ul li a:hover::after {
   color: black;
   transition: all 100ms ease;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-1 .button-background {
