@@ -1,5 +1,45 @@
+let pageWidth = window.innerWidth;
+
+function nameLogoAnimation() {
+    //timeline for name logo
+
+    let tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: '0%',
+            end: '35%',
+            scrub: 1
+        }
+    });
+
+    if (pageWidth >= 1500 && !(hasTouchScreen)) {
+        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
+    }
+    else if (pageWidth < 1500 && pageWidth >= 1400 && !(hasTouchScreen)) {
+        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
+    }
+    else if (pageWidth < 1400 && pageWidth >= 1200 && !(hasTouchScreen)) {
+        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
+    }
+    else if (pageWidth < 1200 && pageWidth >= 1000 && !(hasTouchScreen)) {
+        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
+    }
+    else if (pageWidth < 1000 && pageWidth > 760 && !(hasTouchScreen)) {
+        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
+    }
+    else {
+        tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1});
+    }
+}
+
+nameLogoAnimation();
+
 window.addEventListener("resize", function() {
-    location.reload();
+    nameLogoAnimation();
+    let nameLogo = document.querySelector('.name-logo');
+    let nameLogoContent = nameLogo.innerHTML;
+    nameLogo.innerHTML = nameLogoContent;
+
 })
 
 // checking if user screen is a touch screen
@@ -35,8 +75,6 @@ let tl1 = gsap.timeline({
         scrub: 1
     }
 });
-
-pageWidth = window.innerWidth;
 
 if (pageWidth >= 1500 && !(hasTouchScreen)) {
     tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
