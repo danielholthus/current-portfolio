@@ -9,7 +9,7 @@
 
 //checking if user screen is a touch screen
 
-var hasTouchScreen = false;
+let hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0;
 } else if ("msMaxTouchPoints" in navigator) {
@@ -30,16 +30,18 @@ if ("maxTouchPoints" in navigator) {
     }
 }
 
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+var pageWidth = window.innerWidth;
+
 // -----
 // enable scroll effect from navbar items without adding anything to URL
 
 //Get all the hyperlink elements
-var links = document.getElementsByTagName("a");
-
+let links = document.getElementsByTagName("a");
 //Browse the previously created array
 Array.prototype.forEach.call(links, function(elem, index) {
   //Get the hyperlink target and if it refers to an id go inside condition
-  var elemAttr = elem.getAttribute("href");
+  let elemAttr = elem.getAttribute("href");
   if(elemAttr && elemAttr.includes("#")) {
     //Replace the regular action with a scrolling to target on click
     elem.addEventListener("click", function(ev) {
@@ -57,21 +59,54 @@ Array.prototype.forEach.call(links, function(elem, index) {
 // -----
 // event listeners
 
+if (!(hasTouchScreen)) {
+    window.addEventListener("resize", function() {
+        window.location.reload();
+    });
+}
+
 var nav = document.getElementById("nav");
 if (hasTouchScreen) {
-    nav.style.position = "absolute";
+    nav.style.display = "none";
 }
 
 var logo = document.querySelector('.name-logo');
-if (hasTouchScreen || window.innerWidth < 760) {
+if (isSafari) {
+    logo.style.transform = "translate(-50%, -50%)";
+
+    if (pageWidth <= 330) {
+        logo.style.fontSize = "16px";
+    }
+    else if (pageWidth <= 420) {
+        logo.style.fontSize = "38px";
+    }
+    else if (pageWidth <= 480) {
+        logo.style.fontSize = "46px";
+    }
+    else if (pageWidth <= 550) {
+        logo.style.fontSize = "56px";
+    }
+    else if (pageWidth <= 650) {
+        logo.style.fontSize = "66px";
+    }
+    else if (pageWidth <= 760) {
+        logo.style.fontSize = "76px";
+    }
+    else if (pageWidth <= 900) {
+        logo.style.fontSize = "90px";
+    }
+    else if (pageWidth <= 1080) {
+        logo.style.fontSize = "112px";
+    }
+    else {
+        logo.style.fontSize = "136px";
+    }
+}
+if (hasTouchScreen || window.innerWidth < 760 || isSafari) {
     logo.style.position = "absolute";
 }
 logo.addEventListener("click", function() {
     window.scrollTo(0, 0)
-});
-window.addEventListener('resize', function(){
-    logoContent = logo.innerHTML;
-    logo.innerHTML = logoContent;
 });
 
 var mobileLogo = document.querySelector('.name-logo-alt');

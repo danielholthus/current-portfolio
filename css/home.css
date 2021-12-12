@@ -37,7 +37,9 @@ a {
 
 nav {
   display: flex;
-  justify-content: end;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
   padding: 1rem 5rem;
   background: transparent;
   position: fixed;
@@ -107,9 +109,11 @@ ul li a:hover::after {
   color: #222222;
   cursor: default;
   transform: translate(-50%, -50%) scale(6);
+  -webkit-transform: translate(-50%, -50%) scale(6);
+  font-size: 22px;
+  /* font-size: 8rem; */
   z-index: 1001;
   font-weight: 400;
-  font-size: 1.45rem;
   white-space: nowrap;
 }
 

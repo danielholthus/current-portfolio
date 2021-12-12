@@ -1,5 +1,3 @@
-let pageWidth = window.innerWidth;
-
 function nameLogoAnimation() {
     //timeline for name logo
 
@@ -11,21 +9,22 @@ function nameLogoAnimation() {
             scrub: 1
         }
     });
-
-    if (pageWidth >= 1500 && !(hasTouchScreen)) {
-        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
-    }
-    else if (pageWidth < 1500 && pageWidth >= 1400 && !(hasTouchScreen)) {
-        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
-    }
-    else if (pageWidth < 1400 && pageWidth >= 1200 && !(hasTouchScreen)) {
-        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
-    }
-    else if (pageWidth < 1200 && pageWidth >= 1000 && !(hasTouchScreen)) {
-        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
-    }
-    else if (pageWidth < 1000 && pageWidth > 760 && !(hasTouchScreen)) {
-        tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
+    if (!(hasTouchScreen) && pageWidth > 760 && !(isSafari)){
+        if (pageWidth < 1000) {
+            tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-36vw', y: '-46vh'});
+        } 
+        else if (pageWidth < 1200) {
+            tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-38vw', y: '-46vh'});
+        }
+        else if (pageWidth < 1400) {
+            tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-39vw', y: '-46vh'});
+        } 
+        else if (pageWidth < 1500) {
+            tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-40vw', y: '-46vh'});
+        }
+        else {
+            tl1.to('.name-logo', {scale: 1, cursor: 'pointer', x: '-42vw', y: '-46vh'});
+        }
     }
     else {
         tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1});
@@ -33,37 +32,6 @@ function nameLogoAnimation() {
 }
 
 nameLogoAnimation();
-
-window.addEventListener("resize", function() {
-    nameLogoAnimation();
-    let nameLogo = document.querySelector('.name-logo');
-    let nameLogoContent = nameLogo.innerHTML;
-    nameLogo.innerHTML = nameLogoContent;
-
-})
-
-// checking if user screen is a touch screen
-
-var hasTouchScreen = false;
-if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
-} else if ("msMaxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.msMaxTouchPoints > 0;
-} else {
-    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-    if (mQ && mQ.media === "(pointer:coarse)") {
-        hasTouchScreen = !!mQ.matches;
-    } else if ('orientation' in window) {
-        hasTouchScreen = true; // deprecated, but good fallback
-    } else {
-        // Only as a last resort, fall back to user agent sniffing
-        var UA = navigator.userAgent;
-        hasTouchScreen = (
-            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
-        );
-    }
-}
 
 // load all animations except for name animation AFTER the dom loads
 

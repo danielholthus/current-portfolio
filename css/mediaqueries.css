@@ -103,13 +103,13 @@
 @media screen and (max-width: 900px) {
   .typing-text-container {
     top: 56.5%;
-    left: 19%;
+    left: 20%;
   }
   .name-logo {
     transform: translate(-50%, -50%) scale(4);
   }
   .name-background {
-    min-width: 720px;
+    min-width: 700px;
     top: 53%;
     height: 2.2rem;
   }
