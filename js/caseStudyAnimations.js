@@ -1,3 +1,5 @@
+windowWidth = window.innerWidth;
+
 let tl1 = gsap.timeline({
     scrollTrigger: {
         trigger: 'body',
@@ -41,7 +43,7 @@ let tl3 = gsap.timeline({
     }
 });
 
-tl3.fromTo('.homepage-title', {x: '-100%'}, {x: '-10%'});
+tl3.fromTo('.homepage-title', {x: '-100%'}, {x: '-30%'});
 
 let tl4 = gsap.timeline({
     scrollTrigger: {
@@ -51,7 +53,7 @@ let tl4 = gsap.timeline({
     }
 });
 
-tl4.fromTo('.contact-page-title', {x: '59%'}, {x: '-22%'});
+tl4.fromTo('.contact-page-title', {x: windowWidth}, {x: '-30%'});
 
 let tl5 = gsap.timeline({
     scrollTrigger: {
@@ -61,7 +63,7 @@ let tl5 = gsap.timeline({
     }
 });
 
-tl5.fromTo('.feedback-page-title', {x: '-100%'}, {x: '-10%'});
+tl5.fromTo('.feedback-page-title', {x: '-100%'}, {x: '-30%'});
 
 let tl6 = gsap.timeline({
     scrollTrigger: {
@@ -71,7 +73,7 @@ let tl6 = gsap.timeline({
     }
 });
 
-tl6.fromTo('.user-cards-title', {x: '65%'}, {x: '-22%'});
+tl6.fromTo('.user-cards-title', {x: windowWidth}, {x: '-30%'});
 
 let tl7 = gsap.timeline({
     scrollTrigger: {
@@ -81,7 +83,7 @@ let tl7 = gsap.timeline({
     }
 });
 
-tl7.fromTo('.user-onboarding-title', {x: '-100%'}, {x: '-10%'});
+tl7.fromTo('.user-onboarding-title', {x: '-100%'}, {x: '-35%'});
 
 let tl8 = gsap.timeline({
     scrollTrigger: {
@@ -91,4 +93,4 @@ let tl8 = gsap.timeline({
     }
 });
 
-tl8.fromTo('.messenger-title', {x: '53%'}, {x: '-22%'});
+tl8.fromTo('.messenger-title', {x: windowWidth}, {x: '-30%'});
