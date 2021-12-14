@@ -14,6 +14,7 @@
 html,
 body {
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -138,6 +139,59 @@ section img {
 
 .contact {
   border-top: 1px solid #222222;
+}
+
+.back-to-top {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  color: #222222;
+  transition: color 250ms ease;
+}
+
+.back-to-top p {
+  transition: color 150ms ease;
+}
+
+.back-to-top:hover p {
+  color: #0040ff;
+  transition: color 150ms ease;
+}
+
+.back-to-top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  top: -40%;
+  left: 50%;
+  border-left: 1px solid #0040ff;
+  border-bottom: 1px solid #0040ff;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: all 250ms ease;
+}
+
+.back-to-top:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  top: -40%;
+  left: 50%;
+  border-left: 1px solid #0040ff;
+  border-bottom: 1px solid #0040ff;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 1;
+  transition: all 250ms ease;
 }
 
 @media screen and (max-width: 1000px) {
