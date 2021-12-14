@@ -82,7 +82,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.project-1',
             start: '30% bottom',
-            end: '50% bottom',
+            end: '60% bottom',
             scrub: 1,
         }
     });
@@ -95,7 +95,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.project-2',
             start: '40% bottom',
-            end: '60% bottom',
+            end: '70% bottom',
             scrub: 1,
         }
     });
@@ -108,7 +108,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.project-3',
             start: '30% bottom',
-            end: '50% bottom',
+            end: '60% bottom',
             scrub: 1,
         }
     });
@@ -121,7 +121,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.project-4',
             start: '40% bottom',
-            end: '60% bottom',
+            end: '70% bottom',
             scrub: 1,
         }
     });
@@ -195,16 +195,5 @@ window.onload = function () {
     tl11.from('.about-text', {x: '-40px', y: '40px'});
     
     // timeline for contact animation
-    
-    let tl12 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.contact',
-            start: 'top 90%',
-            end: 'bottom bottom',
-            scrub: 0.2,
-        }
-    });
-    
-    tl12.from('.contact-title-background', {scaleX: 0.2, transformOrigin: "left center", ease: "none"});
 
 }

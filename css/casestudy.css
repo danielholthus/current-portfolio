@@ -1,3 +1,6 @@
+@import "./contact.css";
+@import "./footer.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +19,41 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #e9e1dc;
+  color: #222222;
+}
+
+.progress-bar {
+  position: fixed;
+  width: 100vw;
+  height: 4px;
+  background-color: #2b60ff;
+  z-index: 1000;
+}
+
+.back-home {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  font-weight: 400;
+  font-size: 1rem;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.back-home a {
+  color: #222222;
+  transition: color 300ms ease;
+}
+
+.back-arrow {
+  font-size: 1.3rem;
+  transition: color 300ms ease;
+}
+
+.back-home:hover a,
+.back-home:hover .back-arrow {
+  color: #2b60ff;
+  transition: color 250ms;
 }
 
 header {
@@ -29,23 +67,24 @@ header {
 header h1 {
   color: transparent;
   -webkit-text-stroke: 2px rgb(58, 58, 58);
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 header h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #222222;
+  margin-top: -30px;
 }
 
-header h3 {
+h3 {
   font-size: 1.5rem;
   color: #2b60ff;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
-header p {
-  line-height: 1.6;
+p {
+  line-height: 1.7;
   color: #222222;
 }
 
@@ -55,17 +94,142 @@ header p {
 
 .contributions {
   position: absolute;
-  max-width: 432px;
-  min-width: 350px;
-}
-
-.home-page {
-  background-color: white;
+  max-width: 550px;
+  min-width: 500px;
 }
 
 section {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 8vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(58, 58, 58);
+}
+
+.section-content {
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
+}
+
+.section-content div {
+  max-width: 40%;
+  padding: 50px;
+}
+
+section img {
+  border: 2px solid #222222;
+  max-width: 40%;
+  max-height: 60vh;
+}
+
+.contact {
+  border-top: 1px solid #222222;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+    margin: 120px 0px;
+  }
+  .section-content div {
+    margin-top: 30px;
+    padding: 0;
+    max-width: 70%;
+  }
+  section img {
+    max-width: 50%;
+  }
+  section {
+    height: auto;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header h1 {
+    font-size: 5rem;
+  }
+  header h2 {
+    font-size: 2rem;
+  }
+  .section-content div {
+    margin-top: 30px;
+    padding: 0;
+    max-width: 70%;
+  }
+  section img {
+    max-width: 60%;
+    max-height: 40vh;
+  }
+  .contributions h3 {
+    font-size: 1.3rem;
+    color: #2b60ff;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  p {
+    line-height: 1.7;
+    color: #222222;
+    font-size: 14px;
+  }
+  .contributions {
+    position: absolute;
+    max-width: 550px;
+    padding: 40px;
+    min-width: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 4rem;
+  }
+  header h2 {
+    font-size: 1.5rem;
+    margin-top: -20px;
+  }
+  /* .section-content div {
+    margin-top: 30px;
+    padding: 0;
+    max-width: 70%;
+  }
+  section img {
+    max-width: 60%;
+    max-height: 40vh;
+  } */
+}
+
+@media screen and (max-width: 420px) {
+  .progress-bar {
+    height: 5px;
+  }
+  .contributions {
+    padding: 20px;
+  }
+  .section-content {
+    margin: 60px 0px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contributions {
+    padding: 20px;
+  }
 }

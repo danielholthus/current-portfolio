@@ -1,0 +1,21 @@
+footer {
+  padding: 1.5rem 6rem;
+  background-color: #e9e1dc;
+  color: #222222;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
+footer a:not(:nth-child(1)) {
+  margin-left: 25px;
+}
