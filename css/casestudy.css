@@ -145,22 +145,22 @@ section img {
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   position: relative;
   color: #222222;
   transition: color 250ms ease;
 }
 
 .back-to-top p {
+  cursor: pointer;
   transition: color 150ms ease;
 }
 
-.back-to-top:hover p {
+.back-to-top p:hover {
   color: #0040ff;
   transition: color 150ms ease;
 }
 
-.back-to-top::after {
+.back-to-top p::after {
   content: "";
   display: block;
   position: absolute;
@@ -177,7 +177,7 @@ section img {
   transition: all 250ms ease;
 }
 
-.back-to-top:hover::after {
+.back-to-top p:hover::after {
   content: "";
   display: block;
   position: absolute;
