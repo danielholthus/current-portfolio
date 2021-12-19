@@ -43,18 +43,25 @@ body {
 
 .back-home a {
   color: #222222;
-  transition: color 300ms ease;
+  transition: all 300ms ease;
 }
 
 .back-arrow {
   font-size: 1.3rem;
-  transition: color 300ms ease;
+  transition: all 300ms ease;
+  position: relative;
+  right: 0;
 }
 
-.back-home:hover a,
+.back-home:hover a {
+  color: #2b60ff;
+  transition: all 250ms ease;
+}
+
 .back-home:hover .back-arrow {
   color: #2b60ff;
-  transition: color 250ms;
+  transition: color 250ms ease, right 100ms ease;
+  right: 10px;
 }
 
 header {
