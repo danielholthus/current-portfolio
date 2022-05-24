@@ -15,14 +15,14 @@ if ("maxTouchPoints" in navigator) {
 } else if ("msMaxTouchPoints" in navigator) {
     hasTouchScreen = navigator.msMaxTouchPoints > 0;
 } else {
-    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+    let mQ = window.matchMedia && matchMedia("(pointer:coarse)");
     if (mQ && mQ.media === "(pointer:coarse)") {
         hasTouchScreen = !!mQ.matches;
     } else if ('orientation' in window) {
         hasTouchScreen = true; // deprecated, but good fallback
     } else {
         // Only as a last resort, fall back to user agent sniffing
-        var UA = navigator.userAgent;
+        let UA = navigator.userAgent;
         hasTouchScreen = (
             /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
             /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
@@ -30,8 +30,8 @@ if ("maxTouchPoints" in navigator) {
     }
 }
 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-var pageWidth = window.innerWidth;
+let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+let pageWidth = window.innerWidth;
 
 // -----
 // enable scroll effect from navbar items without adding anything to URL
@@ -65,12 +65,12 @@ if (!(hasTouchScreen)) {
     });
 }
 
-var nav = document.getElementById("nav");
+let nav = document.getElementById("nav");
 if (hasTouchScreen) {
     nav.style.display = "none";
 }
 
-var logo = document.querySelector('.name-logo');
+let logo = document.querySelector('.name-logo');
 if (isSafari) {
     logo.style.transform = "translate(-50%, -50%)";
 
@@ -109,12 +109,12 @@ logo.addEventListener("click", function() {
     window.scrollTo(0, 0)
 });
 
-var mobileLogo = document.querySelector('.name-logo-alt');
+let mobileLogo = document.querySelector('.name-logo-alt');
 mobileLogo.addEventListener("click", function() {
     window.scrollTo(0, 0)
 });
 
-var scrollarrow = document.querySelector('.scrollarrow');
+let scrollarrow = document.querySelector('.scrollarrow');
 scrollarrow.addEventListener("click", function() {
     document.getElementById('projects').scrollIntoView({
         behavior: "smooth",

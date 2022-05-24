@@ -1,7 +1,7 @@
-var emailDiv = document.querySelector('.contact-email');
-var emailHover = document.querySelector('.email-hover');
-var emailAddress = document.querySelector('.email-address');
-var copyText = document.querySelector('.copy-text');
+let emailDiv = document.querySelector('.contact-email');
+let emailHover = document.querySelector('.email-hover');
+let emailAddress = document.querySelector('.email-address');
+let copyText = document.querySelector('.copy-text');
 
 emailDiv.addEventListener("mouseover", function() {
     emailHover.style.backgroundColor = "#2b60ffc2";
