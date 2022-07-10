@@ -51,6 +51,7 @@ body {
   transition: all 300ms ease;
   position: relative;
   right: 0;
+  bottom: 2px;
 }
 
 .back-home:hover a {
