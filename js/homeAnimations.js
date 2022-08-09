@@ -27,7 +27,7 @@ function nameLogoAnimation() {
         }
     }
     else {
-        tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1});
+        tl1.to('.name-logo', {opacity: 0, display: 'hidden'}).to('.name-logo-alt', {opacity: 1, cursor: 'pointer'});
     }
 }
 

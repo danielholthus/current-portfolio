@@ -129,7 +129,7 @@ ul li a:hover::after {
   font-size: 1.45rem;
   z-index: 1001;
   opacity: 0;
-  cursor: pointer;
+  cursor: default;
 }
 
 .name-background {
