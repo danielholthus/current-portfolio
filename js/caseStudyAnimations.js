@@ -17,7 +17,7 @@ let tl2 = gsap.timeline({
         start: '0%',
         end: '100%',
         scrub: true,
-        pin: '.hoamsy-title'
+        pin: '.title'
     }
 });
 
@@ -31,7 +31,7 @@ let tl2b = gsap.timeline({
     }
 });
 
-tl2.to('.hoamsy-title', {opacity: 0, xPercent: '-50'});
+tl2.to('.title', {opacity: 0, xPercent: '-50'});
 
 tl2.from('.contributions', {opacity: 0, xPercent: '50'});
 

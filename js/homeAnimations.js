@@ -127,10 +127,36 @@ window.onload = function () {
     });
     
     tl6b.from('.project-4', {opacity: 0, x: '40px'});
+
+    //timeline for project 5
+
+    let tl7 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.project-5',
+            start: '30% bottom',
+            end: '60% bottom',
+            scrub: 1,
+        }
+    });
+    
+    tl7.from('.project-5', {opacity: 0, x: '-40px'});
+
+        //timeline for project 6
+    
+        let tl7b = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.project-6',
+                start: '40% bottom',
+                end: '70% bottom',
+                scrub: 1,
+            }
+        });
+        
+        tl7b.from('.project-6', {opacity: 0, x: '40px'});
     
     //timeline for projects square 
     
-    let tl7 = gsap.timeline({
+    let tl8 = gsap.timeline({
         scrollTrigger: {
             trigger: '.projects',
             start: 'top bottom',
@@ -138,12 +164,12 @@ window.onload = function () {
         repeat: -1
     });
     
-    tl7.to('.projects-square', {duration: 70, x: '102vw', y: '25vh', rotation: 340, ease:'linear'})
+    tl8.to('.projects-square', {duration: 70, x: '102vw', y: '25vh', rotation: 340, ease:'linear'})
         .to('.projects-square', {duration: 70, x: '-60vw', y: '25vh', rotation: -360, ease: 'linear'});
     
     // timeline for projects triangle
     
-    let tl8 = gsap.timeline({
+    let tl9 = gsap.timeline({
         scrollTrigger: {
             trigger: '.projects-triangle',
             start: 'top bottom',
@@ -151,12 +177,12 @@ window.onload = function () {
         repeat: -1,
     });
         
-    tl8.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
+    tl9.to('.projects-triangle', {duration: 70, x: '-102vw', y: '-20vh', rotation: -340, ease:'linear'})
         .to('.projects-triangle', {duration: 80, x: '100vw', y: '20vh', rotation: 360, ease: 'linear'});
     
     // timeline for projects cross
     
-    let tl9 = gsap.timeline({
+    let tl10 = gsap.timeline({
         scrollTrigger: {
             trigger: '.projects-cross',
             start: 'top bottom',
@@ -165,12 +191,12 @@ window.onload = function () {
     });
     
     
-    tl9.to('.projects-cross', {duration: 80, x: '102vw', y: '-40vh', rotation: 340, ease:'linear'})
+    tl10.to('.projects-cross', {duration: 80, x: '102vw', y: '-40vh', rotation: 340, ease:'linear'})
         .to('.projects-cross', {duration: 90, x: '-100vw', y: '20vh', rotation: -360, ease: 'linear'});
     
     //timeline for headshot
     
-    let tl10 = gsap.timeline({
+    let tl11 = gsap.timeline({
         scrollTrigger: {
             trigger: '.about',
             start: 'top 90%',
@@ -179,11 +205,11 @@ window.onload = function () {
         },
     });
     
-    tl10.from('.headshot', {x: '70px', y: '-30px'});
+    tl11.from('.headshot', {x: '70px', y: '-30px'});
     
     // timeline for about me content
     
-    let tl11 = gsap.timeline({
+    let tl12 = gsap.timeline({
         scrollTrigger: {
             trigger: '.about',
             start: 'top 70%',
@@ -192,7 +218,7 @@ window.onload = function () {
         },
     });
     
-    tl11.from('.about-text', {x: '-40px', y: '40px'});
+    tl12.from('.about-text', {x: '-40px', y: '40px'});
     
     // timeline for contact animation
 
