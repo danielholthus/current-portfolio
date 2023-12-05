@@ -1,14 +1,22 @@
-<svg width="401" height="401" viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="119.5" y1="400.5" x2="119.5" y2="280.5" stroke="black" stroke-linecap="round"/>
-<line x1="280.5" y1="400.5" x2="280.5" y2="281.5" stroke="black" stroke-linecap="round"/>
-<line x1="119.5" y1="400.5" x2="280.5" y2="400.5" stroke="black" stroke-linecap="round"/>
-<line x1="281.5" y1="0.5" x2="281.5" y2="120.5" stroke="black" stroke-linecap="round"/>
-<line x1="120.5" y1="0.5" x2="120.5" y2="119.5" stroke="black" stroke-linecap="round"/>
-<line x1="281.5" y1="0.5" x2="120.5" y2="0.5" stroke="black" stroke-linecap="round"/>
-<line x1="0.5" y1="119.5" x2="120.5" y2="119.5" stroke="black" stroke-linecap="round"/>
-<line x1="0.5" y1="280.5" x2="119.5" y2="280.5" stroke="black" stroke-linecap="round"/>
-<line x1="0.5" y1="119.5" x2="0.500007" y2="280.5" stroke="black" stroke-linecap="round"/>
-<line x1="400.5" y1="281.5" x2="280.5" y2="281.5" stroke="black" stroke-linecap="round"/>
-<line x1="400.5" y1="120.5" x2="281.5" y2="120.5" stroke="black" stroke-linecap="round"/>
-<line x1="400.5" y1="281.5" x2="400.5" y2="120.5" stroke="black" stroke-linecap="round"/>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-outside-1_329_24" maskUnits="userSpaceOnUse" x="0" y="119" width="120" height="162" fill="black">
+<rect fill="white" y="119" width="120" height="162"/>
+<path d="M37 280C17.1177 280 1 263.882 1 244L1 156C1 136.118 17.1178 120 37 120H120L120 280H37Z"/>
+</mask>
+<path d="M37 281C16.5655 281 0 264.435 0 244L0 156C0 135.565 16.5655 119 37 119V121C17.67 121 2 136.67 2 156L2 244C2 263.33 17.67 279 37 279V281ZM120 120L120 280L120 120ZM120 281H37C16.5655 281 0 264.435 0 244H2C2 263.33 17.67 279 37 279H120V281ZM0 156C0 135.565 16.5655 119 37 119H120V121H37C17.67 121 2 136.67 2 156H0Z" fill="black" mask="url(#path-1-outside-1_329_24)"/>
+<mask id="path-3-outside-2_329_24" maskUnits="userSpaceOnUse" x="119" y="280" width="162" height="120" fill="black">
+<rect fill="white" x="119" y="280" width="162" height="120"/>
+<path d="M120 280H280V363C280 382.882 263.882 399 244 399H156C136.118 399 120 382.882 120 363V280Z"/>
+</mask>
+<path d="M120 280H280H120ZM281 363C281 383.435 264.435 400 244 400H156C135.565 400 119 383.435 119 363H121C121 382.33 136.67 398 156 398H244C263.33 398 279 382.33 279 363H281ZM156 400C135.565 400 119 383.435 119 363V280H121V363C121 382.33 136.67 398 156 398V400ZM281 280V363C281 383.435 264.435 400 244 400V398C263.33 398 279 382.33 279 363V280H281Z" fill="black" mask="url(#path-3-outside-2_329_24)"/>
+<mask id="path-5-outside-3_329_24" maskUnits="userSpaceOnUse" x="119" y="0" width="162" height="120" fill="black">
+<rect fill="white" x="119" width="162" height="120"/>
+<path d="M120 37C120 17.1177 136.118 1 156 1H244C263.882 1 280 17.1178 280 37V120H120V37Z"/>
+</mask>
+<path d="M119 37C119 16.5655 135.565 0 156 0H244C264.435 0 281 16.5655 281 37H279C279 17.67 263.33 2 244 2H156C136.67 2 121 17.67 121 37H119ZM280 120H120H280ZM119 120V37C119 16.5655 135.565 0 156 0V2C136.67 2 121 17.67 121 37V120H119ZM244 0C264.435 0 281 16.5655 281 37V120H279V37C279 17.67 263.33 2 244 2V0Z" fill="black" mask="url(#path-5-outside-3_329_24)"/>
+<mask id="path-7-outside-4_329_24" maskUnits="userSpaceOnUse" x="280" y="119" width="120" height="162" fill="black">
+<rect fill="white" x="280" y="119" width="120" height="162"/>
+<path d="M280 280V120H363C382.882 120 399 136.118 399 156V244C399 263.882 382.882 280 363 280H280Z"/>
+</mask>
+<path d="M280 280V120V280ZM363 119C383.435 119 400 135.565 400 156V244C400 264.435 383.435 281 363 281V279C382.33 279 398 263.33 398 244V156C398 136.67 382.33 121 363 121V119ZM400 244C400 264.435 383.435 281 363 281H280V279H363C382.33 279 398 263.33 398 244H400ZM280 119H363C383.435 119 400 135.565 400 156H398C398 136.67 382.33 121 363 121H280V119Z" fill="black" mask="url(#path-7-outside-4_329_24)"/>
 </svg>
