@@ -18,6 +18,7 @@ emailDiv.addEventListener("click", function(){
     setTimeout(function(){copyText.innerHTML = "Click to copy"}, 2500);
     navigator.clipboard.writeText('daniel@danielholthus.com');
     confetti({
+        spread: 200,
         origin: { y: 0.75 }
     });
 });
