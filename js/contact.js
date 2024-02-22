@@ -14,9 +14,12 @@ emailDiv.addEventListener("mouseout", function() {
     copyText.style.opacity = "0";
 });
 emailDiv.addEventListener("click", function(){
-    copyText.innerHTML = "Copied!&nbsp &nbsp &nbsp &nbsp &nbsp";
+    copyText.innerHTML = "Copied!";
     setTimeout(function(){copyText.innerHTML = "Click to copy"}, 2500);
     navigator.clipboard.writeText('daniel@danielholthus.com');
+    confetti({
+        origin: { y: 0.75 }
+    });
 });
 
 let tl = gsap.timeline({
