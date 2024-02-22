@@ -1,4 +1,4 @@
-windowWidth = window.innerWidth;
+const windowWidth = window.innerWidth;
 
 let tl1 = gsap.timeline({
     scrollTrigger: {
