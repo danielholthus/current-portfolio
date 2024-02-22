@@ -42,6 +42,9 @@ if (hasTouchScreen) {
   nav.style.display = "none"
 }
 
+let footerEmailLink = document.getElementById("email-hover")
+footerEmailLink.addEventListener("click", () => confetti())
+
 let logo = document.querySelector(".name-logo")
 if (isSafari) {
   logo.style.transform = "translate(-50%, -50%)"
