@@ -1,5 +1,5 @@
-# current-portfolio
+# Portfolio v1
 
-#### This is the source code for my current portfolio website, [danielholthus.com](https://www.danielholthus.com/).
+#### This is the source code for the first rendition of my portfolio website, available to view at [v1.danielholthus.com](https://v1.danielholthus.com/).
 
-#### I would love if you checked it out! If you like it, that's great! And if not, I'm always open criticisim and would love to hear what you might change about it. Cheers!
+#### You can see my most up-to-date portfolio site at [danielholthus.com](https://www.danielholthus.com/)
